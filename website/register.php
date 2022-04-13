@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
          <meta charset="UTF-8">
-         <title>Login</title>
+         <title>Register</title>
     </head>
     <body>
-        <h1>Login</h1>
+        <h1>Register</h1>
         <form action="register.php" method="post">
             <label for="username">Username</label>
             <input type="text" name="uname" id="username">
