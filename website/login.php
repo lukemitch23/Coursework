@@ -28,6 +28,7 @@ if (isset($_POST['uname']) && isset($_POST['psswd'])) {
     if (mysqli_num_rows($result) > 0) {
         echo "Login successful";
         // send user to home.php
+        sleep(2);
         header("Location: home.php");
     } else {
         echo "Login failed";

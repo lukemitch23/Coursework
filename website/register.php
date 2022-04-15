@@ -32,6 +32,7 @@ if (isset($_POST['uname']) && isset($_POST['psswd']) && isset($_POST['email'])) 
     if ($result) {
         echo "Registration successful";
         // send user back to index.php
+        sleep(2);
         header("Location: home.php");
     } else {
         echo "Registration failed";
