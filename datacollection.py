@@ -1,11 +1,5 @@
-from concurrent.futures.process import _MAX_WINDOWS_WORKERS
-from doctest import DocTestParser
-from operator import contains
-from pyexpat import model
-from unittest import IsolatedAsyncioTestCase
-from cv2 import CAP_PROP_XI_LENS_FEATURE_SELECTOR, VideoCapture
 import mysql.connector
-from numpy import min_scalar_type
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
@@ -13,9 +7,9 @@ import time
 import csv
 
 mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="Badger23",
+  host="192.168.0.45",
+  user="server",
+  password="server123",
   database="site"
 )
 
@@ -23,7 +17,7 @@ mycursor = mydb.cursor()
 
 
 lisfile = open('list.txt', 'r')
-sparefile = open('spare.csv', 'w')
+#sparefile = open('spare.csv', 'w')
 
 def get_url(k):
   address = lisfile.readline(k)
@@ -711,7 +705,7 @@ def regular():
   print('record added for' + camera_model_strip)
 
 for line in lisfile:
-  sparefile.write(line)
+  #sparefile.write(line)
   options = Options()
   options.add_argument('--headless')
   driver = webdriver.Chrome('/Users/lukemitchell/chromedriver', chrome_options=options)
